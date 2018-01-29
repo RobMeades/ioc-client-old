@@ -1,6 +1,6 @@
 First, load up your favourite Linux flavour for your Raspberry Pi.  Here I use Arch Linux since it installs a bare minimum for access via an SSH terminal and leaves the rest to you, but you may adapt the installation described here to whatever Linux distribution you choose.
 
-INSTALL ARCH LINUX
+Install Arch Linux
 ==================
 Follow the installation instructions here (you will need a Linux machine from which to perform the installation onto the Raspberry Pi SD card; if you don't have one you can temporarily boot your Windows PC into Linux from a USB stick for this purpose):
 
@@ -8,7 +8,7 @@ https://archlinuxarm.org/platforms/armv7/broadcom/raspberry-pi-2
 
 Once done you should be logged into an SSH prompt on the Raspberry Pi.
 
-CONFIGURE ARCH LINUX
+Configure Arch Linux
 ====================
 Become root with:
 
@@ -143,7 +143,7 @@ Set `vsftpd` to start at boot by entering:
 
 `systemctl enable vsftpd`
 
-CONFIGURE I2S
+Configure I2S
 =============
 Configuration of the I2S interface on the Raspberry Pi is based on the instructions that can be found here:
 
@@ -160,7 +160,7 @@ Edit `/etc/modules-load.d/raspberrypi.conf` to add the line:
 
 `bcm2708_dmaengine`
 
-BUILD AND LOAD THE ICS43432 MICROPHONE DRIVER
+Build And Load The ICS43432 Microphone Driver
 =============================================
 Next we need to build and load the ICS43432 microphone driver.  This is already available as part of the Linux source tree but is not built or loaded by default.
 
@@ -375,16 +375,16 @@ ip_tables              12235  0
 x_tables               17324  1 ip_tables
 ipv6                  387315  48
 ```
-CONNECT AN ICS43432 MEMS MICROPHONE
+Connect An ICS43432 MEMS Microphone
 ===================================
 The pins you need on the Raspberry Pi header are as follows:
 
 * Pin 12: I2S clock
 * Pin 35: I2S frame
-* Pin 20: I2S data in
+* Pin 38: I2S data in
 * Pin 39: ground
 * Pin 1:  3.3V
-* [Pin 21: I2S data out]
+* [Pin 40: I2S data out]
 
 If you want to confirm that all is good, attach an oscilloscope or logic analyser to the pins and activate the pins by requesting a 10 second long recording with:
 
