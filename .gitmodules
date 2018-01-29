@@ -1,0 +1,3 @@
+[submodule "urtp"]
+	path = urtp
+	url = https://github.com/u-blox/urtp.git
