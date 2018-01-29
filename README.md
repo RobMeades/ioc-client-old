@@ -156,10 +156,6 @@ dtparam=audio=on
 dtparam=i2s=on
 ```
 
-Edit `/etc/modules-load.d/raspberrypi.conf` to add the line:
-
-`bcm2708_dmaengine`
-
 Build And Load The ICS43432 Microphone Driver
 =============================================
 Next we need to build and load the ICS43432 microphone driver.  This is already available as part of the Linux source tree but is not built or loaded by default.
