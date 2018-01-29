@@ -222,11 +222,11 @@ Install it with:
 
 ```
 gzip sound/soc/codecs/snd-soc-ics43432.ko
-cp sound/soc/codecs/snd-soc-ics43432.ko.gz /usr/lib/modules/`uname -r`/extramodules/
+cp sound/soc/codecs/snd-soc-ics43432.ko.gz /usr/lib/modules/``uname -r``/extramodules/
 ```
 Try adding the module manually with:
 
-`insmod /usr/lib/modules/`uname -r`/extramodules/snd-soc-ics43432.ko.gz`
+`insmod /usr/lib/modules/``uname -r``/extramodules/snd-soc-ics43432.ko.gz`
 
 If this fails with the error `Could not insert module, invalid module format` then you've downloaded the wrong version of Linux kernel source for the Linux binary you are using and you need to repeat this section using the correct Linux kernel source version.
 
@@ -333,7 +333,7 @@ Install ALSA with:
 
 `pacman -S alsa-utils alsa-firmware alsa-lib alsa-plugins`
 
-Add the default user [`ioc`] to the audio group to avoid any permissions problems:
+Add the user (in our case `ioc`) to the audio group to avoid any permissions problems:
 
 `usermod -a -G audio ioc`
 
